@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Portfolio</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="profile">
+            <div class="profile-image"></div>
+            <div class="profile-name">Tai Ayman</div>
+        </div> 
+        <div class="facebook-icon">
+            <a href="https://web.facebook.com/imad.jamyl.1" target="_blank">
+                <img src="images/facebook.png" alt="Facebook" width="24" height="24">
+            </a>
+        </div>
+    </div>
+    <!-- End of Top Bar -->
+
+    <!-- Progress Bar -->
+    <progress id="progress-bar" value="0" max="4"></progress>
+    <!-- End of Progress Bar -->
+    <div id="phone-description" class="phone-description">
+        estimate your app that you want to create.
+    </div>
+    
+    <!-- Phone Container -->
+    <div id="phone-container" class="container">
+        <img src="images/phone1.png" alt="Phone 1" class="phone-img">
+        <img src="images/phone2.png" alt="Phone 2" class="phone-img">
+        <img src="images/phone3.png" alt="Phone 3" class="phone-img">
+        <img src="images/phone4.png" alt="Phone 4" class="phone-img">
+    </div>
+
+    <button id="contact-button" class="get-started-button" style="display: none;" onclick="contactDeveloper()">Contact the Developer</button>
+
+    
+    <!-- End of Phone Container -->
+
+    <script src="script2.js"></script>
+</body>
+</html>

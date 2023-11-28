@@ -1,0 +1,176 @@
+/* Add your CSS here */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Use auto-fit to adjust the number of columns */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between items */
+    padding: 20px;
+}
+.portfolio-title {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+    margin-top: 20px; 
+    color: #2a2929;/* Add some margin from the top */
+}
+.profile-name {
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: #000; /* Black text color */
+    font-family: 'Nunito', sans-serif;
+}
+.phone-img {
+    width: 100%; /* Full width within the grid cell */
+    max-width: 250px; /* Max width to prevent the images from becoming too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8%; /* Rounded corners for aesthetics */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    cursor: pointer;
+}
+.get-started-button {
+    background-color: #f3cda2; /* Facebook blue color */
+    color: #ffffff;
+    padding: 8px 13px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold; /* Make the text bold */
+    font-size: 16px;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.75);
+    transition: box-shadow 0.1s, transform 0.1s; /* Solid shadow at the bottom */
+
+    /* Centering the button */
+    display: block; /* This makes sure the button is a block-level element */
+    margin-left: auto; /* This will push the button from the left side */
+    margin-right: auto; /* This will push the button from the right side */
+}
+
+.get-started-button:active {
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.75); /* Smaller shadow for pressed effect */
+    transform: translateY(2px); /* Slightly move the button down to mimic pressing */
+}
+
+
+.phone-card {
+    width: 100%; /* Full width within the grid cell */
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8%;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+
+.phone-description {
+    text-align: center; /* Center align the text */
+    margin: 20px 50px; /* Same horizontal margin as the progress bar */
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: #333; /* Adjust text color as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background: #fcf1e6;
+    justify-content: center;
+
+}
+.facebook-icon {
+    display: flex;
+    align-items: center;
+}
+
+.facebook-icon img {
+    width: 50px; /* Adjust image size as needed */
+    height: 50px; /* Adjust image size as needed */
+    margin-left: auto; /* Push the icon to the right */
+}
+
+.profile-image {
+    width: 45px; /* Adjust image size as needed */
+    height: 45px; /* Adjust image size as needed */
+    background-color: #000; /* Black background */
+    border-radius: 50%; /* Rounded shape */
+    margin-right: 10px; /* Spacing between image and name */
+}
+
+/* Update the .top-bar styles */
+.top-bar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Set to stick at the top */
+    z-index: 1000; /* Ensure it's above other items */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Center the text */
+    border-bottom: 1px solid #ececec; /* Optional: adds a subtle border */
+    background-color: rgba(255, 255, 255, 0.9); /* Improved white background with opacity */
+    color: #000; /* Text color */
+    display: flex;
+    justify-content: space-between; /* Align items at the ends */
+    align-items: center; /* Vertically center content */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the progress bar */
+progress {
+    width: calc(100% - 100px); /* Subtracting 100px total for left and right margins */
+    margin: 35px 50px; /* 20px top and bottom, 50px right and left */
+    -webkit-appearance: none; /* Removes default appearance */
+    appearance: none; /* Removes default appearance */
+    height: 20px; /* Set a fixed height */
+    border-radius: 10px; /* Optional: for rounded corners */
+    background-color: #eee;
+    overflow: hidden; 
+    transition: width 0.5s ease;/* Light grey background */
+}
+
+/* Style for the progress value */
+progress::-webkit-progress-bar {
+    background-color: #edebeb;
+    border-radius: 10px;/* Light grey background */
+}
+
+progress::-webkit-progress-value {
+    background-color: #f3cda2; /* Green color for the progress */
+    transition: width 0.5s ease; /* Smooth transition for width change */
+}
+
+progress::-moz-progress-bar {
+    background-color: #f3cda2; /* Green color for the progress */
+    transition: width 0.5s ease; /* Smooth transition for width change */
+}
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+/* Responsive Design for smaller screens */
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for very small screens */
+        gap: 10px;
+    }
+    /* Adjust the progress bar for smaller screens */
+    progress {
+        width: calc(100% - 20px); /* Adjusting progress bar width for smaller screens */
+        margin: 10px; /* Smaller margins */
+    }
+}
